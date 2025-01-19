@@ -1,5 +1,3 @@
-from dataclasses import dataclass
-from pydoc_data.topics import topics
 from typing import List
 
 from sqlalchemy.orm import Mapped
@@ -7,7 +5,7 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session
-from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 class Tag(Base):
