@@ -21,6 +21,15 @@ the idea of having a single binary with dimple capabilities is intriguing. Howev
 
 In this design the shared services will be backed by a mongodb atlas cluster.
 
+### Key Design Pricipals
+
+- system should be extensible.
+- solid api design / contract upfront.
+- no special cases for individual client types.
+- system should function with < 5s response times on llm respnses and < 500ms on all other functionality
+	- search sevice cache
+- System configurations should be stored outside of etcd to allow for easy recovery
+
 ### Services / Endpoints
 
 #### Search
