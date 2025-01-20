@@ -56,13 +56,23 @@ Response:
 ```json
 {
 	"Summary" : "",
-	"Tags" : ["",""],
+	"Tags" : ["tag1"],
 	"Interactions" : [
 		{
-			
+			"id" : 0,
+			"tags": ["tag1","tag3"],
+			"topic": "this is a topic",
+			"prompt": "prompt",
+			"response": "response",
+			"context": "context"
 		},
 		{
-			
+			"id" : 1,
+			"tags": ["tag1","tag2"],
+			"topic": "this is a topic",
+			"prompt": "prompt",
+			"response": "response",
+			"context": "context"
 		}
 	]
 }
