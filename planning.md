@@ -1,3 +1,5 @@
+from io import StringIO
+
 ## Goals
 - Take in text and add a topic, and tags. Classification
 - On returning results from a search return the results as a list of interactions and a summary of them.
@@ -33,8 +35,54 @@ In this design the shared services will be backed by a mongodb atlas cluster.
 ### Services / Endpoints
 
 #### Search
+Contextual search possibly? Start with a simple tags search and then add features.
+
+Search service should return an object with a summary of search results and common tags
+plus a list of interactions.
+
+/POST /search 
+
+Request:
+```json
+
+{
+	"term" : "",
+	"context" : ""
+}
+
+```
+
+Response:
+```json
+{
+	"Summary" : "",
+	"Tags" : ["",""],
+	"Interactions" : [
+		{
+			
+		},
+		{
+			
+		}
+	]
+}
+
+```
 
 #### Save
+
+Saves the common interaction object.
+
+```python
+
+class Interaction:
+	id: int
+	tags: str
+	topic: str
+	prompt: str
+	response: str
+	context: str
+```
 
 #### Ponder
 - Middleware / Proxy for LLM chat requests
